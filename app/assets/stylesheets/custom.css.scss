@@ -6,6 +6,7 @@ $navbar-default-bg: #186CA2;
 
 body { 
   padding: 45px 0 0 0;
+  background-color: #f4f4f4;
 }
 html, body{
   height: 100%;
@@ -14,7 +15,7 @@ html, body{
     float:left;
     font-size: 1.7em;
     color:#fff;
-    text-transform:uppercase;
+    text-transform:none;
     letter-spacing: -1px;
     font-weight:bold;
 }
@@ -22,27 +23,57 @@ html, body{
 .center{
     text-align: center;
 }
-.jumbotron h2{
-    color:black;
+.jumbotron h1{
+    color:white;
     text-align:center;
     margin-bottom:30px;
     letter-spacing: -1px;
     font-weight: bold;
 }
-.jumbotron h1{
+.jumbotron h2{
     color:#fff;
     text-align:center;
     margin-bottom:30px;
     letter-spacing: -1px;
     font-weight: bold;
+  
 }
 .jumbotron{
     background-image: asset-url('pageant.jpg');
     background-size:cover;
-    height:500px;
+    height:480px;
+    width: 100%;
+    margin-top: 1px;
 }
 .btn-xlarge{
     background-color:#186CA2;
     
+}
+
+#footer {
+  
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #186CA2;
+  color:#fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.thumbnail.right-caption > img {
+    float: left;
+    margin-right: 9px;
+}
+
+.thumbnail.right-caption {
+    float: left;
+}
+
+.thumbnail.right-caption > .caption {
+    padding: 4px;
 }
 
