@@ -1,0 +1,50 @@
+<%= render 'shared/errors', obj: @pageant  %>
+
+<div class="row">
+    <div class="col-md-12">
+        <%= form_for(pageant, :html => { class: "form-horizontal", multipart: true, role: "form" }) do |f| %>
+    <div class="form-group">
+        <div class="control-label col-md-2">
+            <%= f.label :pageant_name %>
+            </div>
+            <div class="col-md-8">
+                <%= f.text_field :pageant_name, class: "form-control", placeholder: "Name of Pageant", autofocus: true %>
+            </div>
+            </div>
+        <div class="form-group">
+        <div class="control-label col-md-2">
+            <%= f.label :description %>
+            </div>
+            <div class="col-md-8">
+                <%= f.text_area :pageant_description, rows:3, class: "form-control", placeholder: "Description of Pageant" %>
+            </div>
+            </div>
+            <div class="form-group">
+        <div class="control-label col-md-2">
+            <%= f.label :category %>
+            </div>
+            <div class="col-md-8">
+                <%= f.text_field :pageant_category, rows:10, class: "form-control", placeholder: "Give a category of your choice" %>
+            </div>
+            </div>
+            
+            <div class="form-group">
+              <div class="control-label col-md-2">
+                <%= f.label :image, "Add an Image" %>
+              </div>
+              <div class="col-md-8">
+                <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+              </div>
+                </div>
+            
+        <div form-group>
+          <div class="col-md-offset-2 col-md-10">
+              <%=  f.submit class: "btn btn-primary btn-lg btn-xlarge" %>
+          </div>  
+        </div>
+        <% end %>
+        <div class="col-md-4 col-md-offset-4 colormatch">
+            [<%= link_to "Return to pageants listing", pageants_path %>]
+        </div>
+</div>
+</div>
