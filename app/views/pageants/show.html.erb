@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div align="center">
     
-</div>
+      </div>
     
     <div>
 
@@ -24,7 +15,7 @@
 				    -->
          <%= image_tag @pageant.image.url, class: "img-responsive center-block" if @pageant.image? %>
         
-  <div class="container">	
+  <div id="exTab2" class="container">	
   <ul class="nav nav-tabs">
 			<li class="active">
         <!--<a  href="#1" data-toggle="tab">--><%= link_to 'Edit', edit_pageant_path(@pageant) %><!--</a>-->
@@ -59,10 +50,6 @@
         </div>
        
 					
-      <div class="tab-pane" id="tab_b">
-            <h4>Pane B</h4>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-                ac turpis egestas.</p>
-        </div>
+      
  |
 <%= link_to 'Back', pageants_path %>

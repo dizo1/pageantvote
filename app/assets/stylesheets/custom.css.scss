@@ -1,4 +1,5 @@
-*{$navbar-default-bg: #186CA2;
+$navbar-default-bg: #186CA2;
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -16,6 +17,9 @@ html, body{
     letter-spacing: -1px;
     font-weight:bold;
     font-family: Century Gothic, sans-serif;
+}
+.navbar-default{
+    margin-bottom: 5px;
 }
 
 .center{
@@ -93,11 +97,11 @@ a.links{
     text-decoration:none;
 }
 .panel-body{
-    font-size: 16px;
+    font-size: 15px;
     font-family: Century Gothic, sans-serif;
 }
 .panel-body p{
-    font-size: 15px;
+    font-size: 145x;
     font-family: Century Gothic, sans-serif;
 }
 .panel{
@@ -108,11 +112,7 @@ a.links{
     width: 844px;
 }
 .nav{
-    font-size: 16px;
+    font-size: 15px;
     font-family: Century Gothic, sans-serif;
 }
-.pageant{
-    
-    }
-    
-}
+   

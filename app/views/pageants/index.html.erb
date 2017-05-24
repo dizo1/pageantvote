@@ -1,8 +1,8 @@
 <!--<p id="notice"></p>-->
-<h1 align="center">Pageants</h1><hr/>
+<h2 align="center">Candidates</h2><hr/>
 
 <% @pageants.each do |pageant| %>
-      <div class="col-sm-6 col-md-4">
+      <div class="col-sm-6 col-md-3">
         <div class="=thumbnail thumb-box">
           <h3 class="triad"><%= link_to pageant.pageant_name, pageant_path(pageant) %></h3>
           <%= image_tag( pageant.image, size: "180x180" ) %>

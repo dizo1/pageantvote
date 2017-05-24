@@ -12,6 +12,7 @@ class PageantsController < ApplicationController
     @pageant = Pageant.new
   end
   
+  
   # POST /pageants
   # POST /pageants.json
   def create
