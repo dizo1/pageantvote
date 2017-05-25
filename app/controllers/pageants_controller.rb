@@ -12,9 +12,6 @@ class PageantsController < ApplicationController
     @pageant = Pageant.new
   end
   
-  
-  # POST /pageants
-  # POST /pageants.json
   def create
     @pageant = Pageant.new(pageant_params)
       if @pageant.save
@@ -66,7 +63,7 @@ class PageantsController < ApplicationController
     def pageant_params
       #params.fetch(:pageant, {})
       
-      params.require(:pageant).permit(:pageant_name, :pageant_description, :pageant_category, :image)
+      params.require(:pageant).permit(:pageant_name, :pageant_description, :pageant_category, :time_zone, :image)
       
     end
 end

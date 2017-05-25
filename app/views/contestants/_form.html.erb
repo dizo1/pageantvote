@@ -1,45 +1,36 @@
-<%= render 'shared/errors', obj: @pageant  %>
+<%= render 'shared/errors', obj: @contestant  %>
 
 <div class="row">
     <div class="col-md-12">
-        <%= form_for(pageant, :html => { class: "form-horizontal", multipart: true, role: "form" }) do |f| %>
+        <%= form_for(contestant, :html => { class: "form-horizontal", multipart: true, role: "form" }) do |f| %>
     <div class="form-group">
         <div class="control-label col-md-2">
-            <%= f.label :pageant_name %>
+            <%= f.label :Number %>
             </div>
             <div class="col-md-8">
-                <%= f.text_field :pageant_name, class: "form-control", placeholder: "Name of Pageant", autofocus: true %>
+                <%= f.text_field :con_num, class: "form-control", placeholder: "Contestant's Number", autofocus: true %>
             </div>
             </div>
         <div class="form-group">
         <div class="control-label col-md-2">
-            <%= f.label :description %>
+            <%= f.label :Name %>
             </div>
             <div class="col-md-8">
-                <%= f.text_area :pageant_description, rows:3, class: "form-control", placeholder: "Description of Pageant" %>
+                <%= f.text_field :name, class: "form-control", placeholder: "Contestant's Name" %>
             </div>
             </div>
             <div class="form-group">
         <div class="control-label col-md-2">
-            <%= f.label :category %>
+            <%= f.label :Profile %>
             </div>
             <div class="col-md-8">
-                <%= f.text_field :pageant_category, rows:10, class: "form-control", placeholder: "Give a category of your choice" %>
-            </div>
-            </div>
-            
-            <div class="form-group">
-        <div class="control-label col-md-2">
-            <%= f.label :time_zone %>
-            </div>
-            <div class="col-md-8">
-                <%= f.time_zone_select :time_zone, nil, {}, class: 'form-control' %>
+                <%= f.text_field :profile, rows:5, class: "form-control", placeholder: "Contestant's Profile" %>
             </div>
             </div>
             
             <div class="form-group">
               <div class="control-label col-md-2">
-                <%= f.label :image, "Add Banner" %>
+                <%= f.label :image, "Add an Image" %>
               </div>
               <div class="col-md-8">
                 <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>

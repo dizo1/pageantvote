@@ -12,11 +12,14 @@
   <body>
     <div>
       <%= render 'layouts/nav' %>
+    <div class="message">
       <%=  render 'layouts/messages' %>
+    </div>
     <%= yield %>
     <!--Body goes here-->
     
     </div>
     <!--Here was footer, now he is gone-->
+    <%= render "layouts/footer" %>
   </body>
 </html>

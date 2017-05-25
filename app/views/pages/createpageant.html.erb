@@ -2,12 +2,14 @@
   <% if pageant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(pageant.errors.count, "error") %> prohibited this pageant from being saved:</h2>
-
+      
+      <div class="message">
       <ul>
       <% pageant.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
+    </div>
     </div>
   <% end %>
 
