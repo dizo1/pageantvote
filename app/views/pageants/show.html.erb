@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
 <div align="center">
     
       </div>
@@ -14,6 +26,41 @@
           </div>
 				    -->
          <%= image_tag @pageant.image.url, class: "img-responsive center-block" if @pageant.image? %>
+         
+  <!--Here goes the trial code for tabs-->
+  <div class="container col-md-8">
+  <h2 align="center">Pageants Created</h2>
+  <p>Menu</p>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Vote Created</a></li>
+    <li><%= link_to 'Edit', edit_pageant_path(@pageant) %><!--<a data-toggle="tab" href="#menu1">Add Contestants</a>--></li>
+    <li><a data-toggle="tab" href="#menu2">Edit Vote</a></li>
+    <li><a data-toggle="tab" href="#menu3">Delete Vote</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3 align="center">Vote Created</h3>
+      <p>This is where the created vote information appears.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3 align="center">Add Contestants</h3>
+      <p>Add Contestants form will be visible from here.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3 align="center">Edit Vote</h3>
+      <p>Edit the vote or votes you have created from here.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Delete</h3>
+      <p>Delete the Votes or Contestants created from here.</p>
+    </div>
+  </div>
+</div>
+
+  
+  <!--It ends here-->
         
   <div id="exTab2" class="container">	
   <ul class="nav nav-tabs">
@@ -56,3 +103,5 @@
  |
 <%= link_to 'Back', pageants_path %>
 <% render "layouts/footer"%>
+</body>
+</html>
