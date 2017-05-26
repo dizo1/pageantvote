@@ -29,6 +29,24 @@
             </div>
             
             <div class="form-group">
+            <div class="control-label col-md-2">
+            <%= f.label :StartDate, "Start Date" %>
+            </div>
+            <div class="col-md-8">
+                <%= f.date_field :startdate, class: "form-control", placeholder: "Enter the start date" %>
+            </div>
+            </div>
+            
+            <div class="form-group">
+            <div class="control-label col-md-2">
+            <%= f.label :Enddate, "End Date" %>
+            </div>
+            <div class="col-md-8">
+                <%= f.date_field :enddate, class: "form-control", placeholder: "Enter the end date" %>
+            </div>
+            </div>
+            
+            <div class="form-group">
         <div class="control-label col-md-2">
             <%= f.label :time_zone %>
             </div>
