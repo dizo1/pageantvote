@@ -8,6 +8,6 @@ class Pageant < ApplicationRecord
     
     default_scope -> {order(updated_at: :desc)}
     
-    has_many :contestants
+    has_many :contestants, dependent: destroy
     
 end
