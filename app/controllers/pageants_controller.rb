@@ -63,7 +63,7 @@ class PageantsController < ApplicationController
     def pageant_params
       #params.fetch(:pageant, {})
       
-      params.require(:pageant).permit(:pageant_name, :pageant_description, :pageant_category, :time_zone, :image)
+      params.require(:pageant).permit(:pageant_name, :pageant_description, :pageant_category, :time_zone, :image, :startdate, :enddate)
       
     end
 end

@@ -10,17 +10,14 @@
   </head>
 
   <body>
-    <div id="wrapper">
-    <div>
       <%= render 'layouts/nav' %>
-    <div class="message">
-      <%=  render 'layouts/messages' %>
-    </div>
+      
+      <div class="row"><%=  render 'layouts/messages' %></div>
+      <div class="container">
     <%= yield %>
-    <!--Body goes here-->
-    
     </div>
     <!--Here was footer, now he is gone-->
+    <div>
     <%= render "layouts/footer" %>
     </div>
   </body>

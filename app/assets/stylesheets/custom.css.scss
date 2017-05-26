@@ -19,7 +19,7 @@ html, body{
     font-family: Century Gothic, sans-serif;
 }
 .navbar-default{
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .center{
@@ -89,27 +89,23 @@ a.links{
     height: 344px;
     width: 844px;
 }
-.container{
-    width: 844px;
-}
 .nav{
     font-size: 15px;
     font-family: Century Gothic, sans-serif;
 }
-.footer {
-  margin-top: 5x;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
+#footer {
+  left: 0px;
+  top: 40px;
   color: white;
-  width:100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  width:auto;
+  margin-right: 0px;
   background-color: #186CA2;
   height:50px;
   bottom: 0px;
-  position:absolute;
+  position:relative;
 }
-#wrapper {
-	min-height:100%;
-	position:relative;
+.container{
+    margin-top: 50px;
+    min-height:100%;
+    height: auto;
 }

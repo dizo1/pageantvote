@@ -31,14 +31,16 @@
           <h4 align="center"><%= @pageant.pageant_name %></h4>
           <h4 align="center"><%= @pageant.pageant_description  %></h4>
           <h4 align="center"><%= @pageant.pageant_category  %></h4>
+          <h4 align="center">Starting: <%= @pageant.startdate.to_s %></h4>
+          <h4 align="center">  Ending: <%= @pageant.enddate.to_s %></h4>
           <h4 align="center">Time Zone: <%= @pageant.time_zone  %></h4>
 				</div>
-				<div class="tab-pane" id="2">
+				<!--<div class="tab-pane" id="2">
           <h3>Notice the gap between the content and tab after applying a background color</h3>
 				</div>
         <div class="tab-pane" id="3">
           <h3>add clearfix to tab-content (see the css)</h3>
-				</div>
+				</div>-->
 			</div>
   </div>
 
