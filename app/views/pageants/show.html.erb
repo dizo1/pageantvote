@@ -35,8 +35,11 @@
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home">Vote Created</a></li>
     <li><a data-toggle="tab" href="#menu1">Add Contestants</a></li>
-    <li><a data-toggle="tab" href="#menu2"><%= link_to 'Edit', edit_pageant_path(@pageant) %></a></li>
-    <li><a data-toggle="tab" href="#menu3">Delete Vote</a></li>
+    <!--<li><a data-toggle="tab" href="#menu2">Edit Vote</a></li>-->
+    <li><a data-toggle="tab" href="#menu2">Edit Vote</a></li>
+    <!--<li><a data-toggle="tab" href="#menu3">Delete Vote</a></li>-->
+    <li><a data-toggle="tab" href="#menu3"><%= link_to "Delete", pageant_path(@pageant), method: :delete,
+                                data: {confirm: "Are you sure ?" } %></a></li>
   </ul>
 
   <div class="tab-content">
@@ -55,8 +58,8 @@
       <p>Add Contestants form will be visible from here.</p>
     </div>
     <div id="menu2" class="tab-pane fade">
-      <h3 align="center">Edit Vote</h3>
-      <p>Edit the vote or votes you have created from here.</p>
+      
+      <p><%= render 'form', pageant: @pageant %></p>
     </div>
     <div id="menu3" class="tab-pane fade">
       <h3>Delete</h3>
@@ -68,16 +71,16 @@
   
   <!--It ends here-->
         
-  <div id="exTab2" class="container">	
+  <!--<div id="exTab2" class="container">	
   <ul class="nav nav-tabs">
 			<li class="active">
-        <!--<a  href="#1" data-toggle="tab">--><%= link_to 'Edit', edit_pageant_path(@pageant) %><!--</a>-->
-			</li>
-			<li ><a href="#tab_b" data-toggle="tab">Add Contestant</a></li>
+        <!--<a  href="#1" data-toggle="tab">--><!--<%= link_to 'Edit', edit_pageant_path(@pageant) %>--><!--</a>-->
+			<!--</li>-->
+		<!--	<li ><a href="#tab_b" data-toggle="tab">Add Contestant</a></li>-->
 			<!--<li><a href="#3" data-toggle="tab">Delete Pageant</a></li>-->
-			<li><%= link_to "Delete", pageant_path(@pageant), method: :delete,
-                                data: {confirm: "Are you sure ?" } %></li>
-		</ul>
+			<!--<li><%= link_to "Delete", pageant_path(@pageant), method: :delete,
+                                data: {confirm: "Are you sure ?" } %></li>-->
+		<!--</ul>-->
 
 			<div class="tab-content ">
 			  <!--<div class="tab-pane active" id="1">
