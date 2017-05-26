@@ -35,15 +35,21 @@
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home">Vote Created</a></li>
     <li><a data-toggle="tab" href="#menu1">Add Contestants</a></li>
-    <li><a data-toggle="tab" href="#menu2">Edit Vote</a></li>
+    <li><a data-toggle="tab" href="#menu2"><%= link_to 'Edit', edit_pageant_path(@pageant) %></a></li>
     <li><a data-toggle="tab" href="#menu3">Delete Vote</a></li>
   </ul>
 
   <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h3 align="center">Vote Created</h3>
-      <p>This is where the created vote information appears.</p>
-    </div>
+      <h3 align="center"><b>Vote Created</b></h3>
+    <div class="tab-pane active fade in active" id="home">
+          <h4 align="center"><%= @pageant.pageant_name %></h4>
+          <h4 align="center"><%= @pageant.pageant_description  %></h4>
+          <h4 align="center"><%= @pageant.pageant_category  %></h4>
+          <h4 align="center">Starting: <%= @pageant.startdate.to_s %></h4>
+          <h4 align="center">  Ending: <%= @pageant.enddate.to_s %></h4>
+          <h4 align="center">Time Zone: <%= @pageant.time_zone  %></h4>
+		</div>
+		
     <div id="menu1" class="tab-pane fade">
       <h3 align="center">Add Contestants</h3>
       <p>Add Contestants form will be visible from here.</p>
@@ -74,14 +80,14 @@
 		</ul>
 
 			<div class="tab-content ">
-			  <div class="tab-pane active" id="1">
+			  <!--<div class="tab-pane active" id="1">
           <h4 align="center"><%= @pageant.pageant_name %></h4>
           <h4 align="center"><%= @pageant.pageant_description  %></h4>
           <h4 align="center"><%= @pageant.pageant_category  %></h4>
           <h4 align="center">Starting: <%= @pageant.startdate.to_s %></h4>
           <h4 align="center">  Ending: <%= @pageant.enddate.to_s %></h4>
           <h4 align="center">Time Zone: <%= @pageant.time_zone  %></h4>
-				</div>
+				</div-->
 				<!--<div class="tab-pane" id="2">
           <h3>Notice the gap between the content and tab after applying a background color</h3>
 				</div>
