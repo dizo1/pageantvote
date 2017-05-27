@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170525104409) do
+ActiveRecord::Schema.define(version: 20170527003814) do
 
   create_table "contestants", force: :cascade do |t|
     t.integer "con_num"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170525104409) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "pageant_id"
   end
 
   create_table "pageants", force: :cascade do |t|
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170525104409) do
     t.string "time_zone"
     t.string "startdate"
     t.string "enddate"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

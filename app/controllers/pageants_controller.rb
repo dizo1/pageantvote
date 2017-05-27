@@ -1,6 +1,6 @@
 class PageantsController < ApplicationController
   before_action :set_pageant, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
   # GET /pageants
   # GET /pageants.json
   def index
@@ -9,11 +9,11 @@ class PageantsController < ApplicationController
 
   # GET /pageants/new
   def new
-    @pageant = Pageant.new
+    @pageant = current_user.pageants.build
   end
   
   def create
-    @pageant = Pageant.new(pageant_params)
+    @pageant = current_user.pageant.build(pageant_params)
       if @pageant.save
         flash[:success] = "Pageant was created successfully"
         redirect_to pageant_path(@pageant)

@@ -9,11 +9,11 @@
     <meta name="author" content="">
     
    
-<!-- Fixed navbar -->
+<!-- Fixed navbar 
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
 <nav class="navbar navbar-default navbar-fixed-top" >
   <div class="container-fluid">
@@ -32,13 +32,13 @@
             <li><%= link_to "Create Vote", new_pageant_path, class: "links" %></li>
             <li><%= link_to "About", about_path, class: "links"%></li>
             <li><%= link_to "Contact", contact_path, class: "links" %></li>
-      </ul>
-      <!--
-              <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-      -->
+        </ul>
+      
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Sign Up", new_user_registration_path, class: "links" %></li>
+          <li><%= link_to "Login", new_user_session_path, class: "links" %></li>
+        </ul>
+
     </div>
   </div>
 </nav>
