@@ -9,11 +9,12 @@ class PageantsController < ApplicationController
 
   # GET /pageants/new
   def new
-    @pageant = current_user.pageants.build
+    @pageant = Pageant.new 
   end
   
   def create
-    @pageant = current_user.pageant.build(pageant_params)
+    @pageant = Pageant.new(pageant_params)
+      @pageant.user = current_user
       if @pageant.save
         flash[:success] = "Pageant was created successfully"
         redirect_to pageant_path(@pageant)
@@ -63,7 +64,7 @@ class PageantsController < ApplicationController
     def pageant_params
       #params.fetch(:pageant, {})
       
-      params.require(:pageant).permit(:pageant_name, :pageant_description, :pageant_category, :time_zone, :image, :startdate, :enddate)
+      params.require(:pageant).permit(:pageant_name, :pageant_description, :pageant_category, :time_zone, :image, :startdate, :enddate, :user_id)
       
     end
 end
